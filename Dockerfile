@@ -1,4 +1,5 @@
 FROM maven:3.5.2-jdk-8-alpine
+CMD [ "ls" ]
 COPY pom.xml /maven-build/
 COPY src/ /maven-build/src/
 WORKDIR /maven-build/
