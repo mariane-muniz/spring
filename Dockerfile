@@ -3,7 +3,7 @@ CMD [ "ls" ]
 COPY pom.xml /maven-build/
 COPY src/ /maven-build/src/
 WORKDIR /maven-build/
-RUN mvn clean install -DskipTests -nsu -T 1.5C
+RUN mvn clean install -DskipTests -nsu -T 3C -q
 
 FROM openjdk:8-jdk
 WORKDIR /root/
