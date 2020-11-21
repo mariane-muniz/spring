@@ -5,6 +5,10 @@ metadata:
   name: spring
 spec:
   template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "1"
+        autoscaling.knative.dev/maxScale: "3"
     spec:
       containers:
         - image: docker.io/marianemuniz/spring
