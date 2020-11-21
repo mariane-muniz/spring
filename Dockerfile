@@ -3,7 +3,7 @@ CMD [ "ls" ]
 COPY pom.xml /maven-build/
 COPY src/ /maven-build/src/
 WORKDIR /maven-build/
-RUN mvn package -Dmaven.artifact.threads=30
+RUN mvn package -q
 
 FROM openjdk:8-jdk
 WORKDIR /root/
