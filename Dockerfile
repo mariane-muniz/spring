@@ -3,7 +3,7 @@ CMD [ "ls" ]
 COPY pom.xml /maven-build/
 COPY src/ /maven-build/src/
 WORKDIR /maven-build/
-RUN mvn clean package -T 50
+RUN mvn clean install -DskipTests -nsu -T 1C -pl "!js,!gwt"
 
 FROM openjdk:8-jdk
 WORKDIR /root/
