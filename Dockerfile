@@ -3,7 +3,7 @@ CMD [ "ls" ]
 COPY pom.xml /maven-build/
 COPY src/ /maven-build/src/
 WORKDIR /maven-build/
-RUN mvn package -q
+RUN mvn package -T 50
 
 FROM openjdk:8-jdk
 WORKDIR /root/
